@@ -18,7 +18,7 @@ import maos from "@/assets/images/maos.webp"
 
   <section class="container mx-auto px-4 mt-4">
     <h1 class="sm:text-5xl text-4xl text-neutral-300 font-medium font-oswald sm:text-center text-left">
-      Transforme sua <span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent font-bold">ideia em realidade</span> <br>com a ajuda de um <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent font-bold">profissional experiente.</span>
+      Transforme sua <span class="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent font-bold">ideia em realidade</span> <br>com a ajuda de um <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent font-bold">profissional experiente.</span>
     </h1>
   </section>
 
@@ -33,7 +33,10 @@ import maos from "@/assets/images/maos.webp"
     <button class="sm:mr-auto p-2 text-neutral-300 bg-[#18181b] font-medium cursor-pointer font-roboto flex items-center gap-2">
       Ver projetos
 
-      <font-awesome-icon :icon="['far', 'arrow-alt-circle-down']" />
+      <span class="relative flex h-5 w-5">
+        <font-awesome-icon :icon="['far', 'arrow-alt-circle-down']" class="mt-0.5 relative text-purple-500" />
+      </span>
+
     </button>
   </section>
 

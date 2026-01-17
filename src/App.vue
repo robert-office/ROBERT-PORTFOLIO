@@ -7,7 +7,7 @@ import Hero from "@/Components/Hero.vue";
   <section>
     <Topbar/>
 
-    <div class="mt-20">
+    <div class="sm:mt-20 mt-14">
       <Hero/>
     </div>
   </section>
