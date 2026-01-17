@@ -13,7 +13,13 @@
     </section>
 
     <section class="ml-auto">
-      <button class="p-2 bg-neutral-300 text-neutral-900 font-medium cursor-pointer hover:bg-neutral-100 font-roboto">CONTATO</button>
+      <button class="p-2 flex items-center gap-2 bg-neutral-300 text-neutral-900 font-medium cursor-pointer hover:bg-neutral-100 font-roboto">
+        CONTATO
+        <span class="relative flex h-5 w-5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+          <font-awesome-icon :icon="['fab', 'whatsapp']" class="mt-0.5 relative text-green-500" />
+        </span>
+      </button>
     </section>
   </header>
 </template>
