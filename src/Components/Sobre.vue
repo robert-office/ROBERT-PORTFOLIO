@@ -222,14 +222,10 @@ const experiences = [
               </span>
             </div>
           </div>
-
         </div>
-        
       </div>
     </div>
-
   </section>
-
 </template>
 
 <style scoped>

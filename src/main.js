@@ -11,10 +11,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
 import { faArrowAltCircleDown } from '@fortawesome/free-regular-svg-icons'
 import { faWhatsapp, faVuejs, faLaravel, faCss3Alt, faJs, faPhp, faMdb } from '@fortawesome/free-brands-svg-icons'
-import { faCode, faPalette, faDatabase, faRocket, faCalendar, faGraduationCap, faBuilding, faImage } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faPalette, faDatabase, faRocket, faCalendar, faGraduationCap, faBuilding, faImage, faFolder, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faArrowAltCircleDown, faWhatsapp, faVuejs, faLaravel, faCss3Alt, faJs, faPhp, faMdb, faCode, faPalette, faDatabase, faRocket, faCalendar, faGraduationCap, faBuilding, faImage)
+library.add(faArrowAltCircleDown, faWhatsapp, faVuejs, faLaravel, faCss3Alt, faJs, faPhp, faMdb, faCode, faPalette, faDatabase, faRocket, faCalendar, faGraduationCap, faBuilding, faImage, faFolder, faChevronLeft, faChevronRight)
 
 const app = createApp(App)
 
