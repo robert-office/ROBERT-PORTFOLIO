@@ -20,16 +20,32 @@ const skills = [
     icon: 'rocket',
     title: 'PERFORMANCE & SEO',
     description: 'Sites rápidos e otimizados para mecanismos de busca.'
+  },
+  {
+    icon: 'server',
+    title: 'DEVOPS & INFRAESTRUTURA',
+    description: 'Deploy, configuração de servidores e automação de processos.'
+  },
+  {
+    icon: 'chart-line',
+    title: 'MONITORAMENTO & TESTES',
+    description: 'Garantia de qualidade com testes automatizados e monitoramento contínuo.'
   }
 ]
 
 const technologies = [
-  { name: 'Vue.js', icon: 'vuejs' },
-  { name: 'Laravel', icon: 'laravel' },
-  { name: 'TailwindCSS', icon: 'css3-alt' },
-  { name: 'JavaScript', icon: 'js' },
-  { name: 'PHP', icon: 'php' },
-  { name: 'MySQL', icon: 'mdb' }
+  { name: 'Vue.js', icon: 'vuejs', color: '#42b883', type: 'fab' },
+  { name: 'Laravel', icon: 'laravel', color: '#ff2d20', type: 'fab' },
+  { name: 'TailwindCSS', icon: 'css3-alt', color: '#06b6d4', type: 'fab' },
+  { name: 'JavaScript', icon: 'js', color: '#f7df1e', type: 'fab' },
+  { name: 'PHP', icon: 'php', color: '#777bb4', type: 'fab' },
+  { name: 'MySQL', icon: 'database', color: '#00758f', type: 'fas' },
+  { name: 'Docker', icon: 'docker', color: '#2496ed', type: 'fab' },
+  { name: 'jQuery', icon: 'js', color: '#0769ad', type: 'fab' },
+  { name: 'SQL Server', icon: 'database', color: '#cc2927', type: 'fas' },
+  { name: 'Bootstrap', icon: 'bootstrap', color: '#7952b3', type: 'fab' },
+  { name: 'MongoDB', icon: 'database', color: '#47a248', type: 'fas' },
+  { name: 'N8N', icon: 'network-wired', color: '#ea4b71', type: 'fas' }
 ]
 
 const graduations = [
@@ -123,11 +139,13 @@ const experiences = [
           <div
               v-for="tech in technologies"
               :key="tech.name"
-              class="group flex items-center gap-3 bg-[#18181b] border border-neutral-800 px-6 py-4 hover:border-green-500/50 hover:shadow-lg hover:shadow-green-500/10 transition-all duration-300"
+              class="group flex items-center gap-3 bg-[#18181b] border border-neutral-800 px-6 py-4 hover:shadow-lg transition-all duration-300"
+              :class="`hover:border-[${tech.color}]/50 hover:shadow-[${tech.color}]/10`"
           >
             <font-awesome-icon
-                :icon="['fab', tech.icon]"
-                class="text-2xl text-green-500 group-hover:scale-110 transition-transform duration-300"
+                :icon="[tech.type, tech.icon]"
+                class="text-2xl group-hover:scale-110 transition-transform duration-300"
+                :style="{ color: tech.color }"
             />
             <span class="text-neutral-300 font-roboto font-medium">{{ tech.name }}</span>
           </div>
