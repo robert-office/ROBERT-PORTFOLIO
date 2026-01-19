@@ -4,6 +4,7 @@ import Topbar from "@/components/Topbar.vue";
 import Hero from "@/components/Hero.vue";
 import Sobre from "@/components/Sobre.vue";
 import Projetos from "@/components/Projetos.vue";
+import CTA from "@/components/CTA.vue";
 
 const showScrollTop = ref(false)
 
@@ -34,6 +35,10 @@ onUnmounted(() => {
 
     <div class="mt-8" id="projetos">
       <Projetos/>
+    </div>
+
+    <div class="mt-8">
+      <CTA/>
     </div>
 
     <a 
