@@ -1,8 +1,23 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 import Topbar from "@/components/Topbar.vue";
 import Hero from "@/components/Hero.vue";
 import Sobre from "@/components/Sobre.vue";
 import Projetos from "@/components/Projetos.vue";
+
+const showScrollTop = ref(false)
+
+const handleScroll = () => {
+  showScrollTop.value = window.scrollY > 300
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
@@ -21,7 +36,11 @@ import Projetos from "@/components/Projetos.vue";
       <Projetos/>
     </div>
 
-    <a href="#topo" class="absolute sticky bottom-4 ml-auto mr-4 w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center cursor-pointer">
+    <a 
+      v-show="showScrollTop"
+      href="#topo" 
+      class="absolute sticky bottom-4 ml-auto mr-4 w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-neutral-700 hover:scale-110"
+    >
       <font-awesome-icon :icon="['far', 'circle-up']" class="text-white text-3xl" />
     </a>
   </section>
