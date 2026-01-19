@@ -3,7 +3,12 @@
     <div class="container mx-auto pt-4 pb-4 flex gap-6 items-center h-10 px-4">
 
     <section class="flex items-center gap-6 h-6">
-      <p class="text-2xl text-neutral-300 font-light cursor-pointer hover:text-neutral-100 font-gravitas">Robert U.</p>
+      <p 
+        @click="handleEasterEgg" 
+        class="text-2xl text-neutral-300 font-light cursor-pointer hover:text-neutral-100 font-gravitas select-none"
+      >
+        Robert U.
+      </p>
       <span class="sm:block hidden bg-gray-400 font-bold h-full w-0.5"></span>
     </section>
 
@@ -23,7 +28,48 @@
     </section>
     </div>
   </header>
+
+  <!-- Easter Egg Video Modal -->
+  <div 
+    v-if="showVideo" 
+    @click="closeVideo"
+    class="fixed inset-0 z-[9999] bg-black flex items-center justify-center cursor-pointer"
+  >
+    <div class="w-full h-full flex items-center justify-center p-4">
+      <iframe 
+        class="w-full h-full max-w-7xl max-h-[90vh]"
+        src="https://www.youtube.com/embed/QTpmSALDqTE?autoplay=1" 
+        title="Easter Egg" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+      ></iframe>
+    </div>
+    <button 
+      @click="closeVideo"
+      class="absolute top-8 right-8 text-white text-4xl hover:text-red-500 transition-colors duration-300"
+    >
+      ×
+    </button>
+  </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+
+const clickCount = ref(0)
+const showVideo = ref(false)
+
+const handleEasterEgg = () => {
+  clickCount.value++
+  
+  if (clickCount.value === 10) {
+    showVideo.value = true
+    clickCount.value = 0
+  }
+}
+
+const closeVideo = () => {
+  showVideo.value = false
+}
 </script>
