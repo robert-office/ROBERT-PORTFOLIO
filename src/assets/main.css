@@ -14,3 +14,8 @@ html {
     background-color: #080808;
     overflow-x: hidden;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+}

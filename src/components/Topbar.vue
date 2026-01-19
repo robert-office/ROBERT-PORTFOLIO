@@ -13,13 +13,13 @@
     </section>
 
     <section class="ml-auto">
-      <button class="sm:rounded-none transition-all duration-300 ease-out hover:scale-105 hover:rotate-2 hover:shadow-md hover:shadow-green-500/30 rounded-full p-2 flex items-center gap-2 bg-neutral-300 text-neutral-900 font-medium cursor-pointer hover:bg-neutral-100 font-roboto">
+      <a href="https://wa.me/5511983521013?text=Olá!%20Gostaria%20de%20conversar%20sobre%20um%20projeto" target="_blank" rel="noopener noreferrer" class="sm:rounded-none transition-all duration-300 ease-out hover:scale-105 hover:rotate-2 hover:shadow-md hover:shadow-green-500/30 rounded-full p-2 flex items-center gap-2 bg-neutral-300 text-neutral-900 font-medium cursor-pointer hover:bg-neutral-100 font-roboto">
         CONTATO
         <span class="relative flex h-5 w-5">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
           <font-awesome-icon :icon="['fab', 'whatsapp']" class="mt-0.5 relative text-green-500" />
         </span>
-      </button>
+      </a>
     </section>
     </div>
   </header>

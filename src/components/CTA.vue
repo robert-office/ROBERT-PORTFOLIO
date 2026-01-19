@@ -29,17 +29,13 @@
           </p>
 
           <a 
-            href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20conversar%20sobre%20um%20projeto" 
+            href="https://wa.me/5511983521013?text=Olá!%20Gostaria%20de%20conversar%20sobre%20um%20projeto"
             target="_blank" 
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white text-lg font-roboto font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50"
           >
             <font-awesome-icon :icon="['fab', 'whatsapp']" class="text-2xl" />
             Conversar no WhatsApp
-            <span class="relative flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
-            </span>
           </a>
 
           <p class="text-neutral-500 text-sm font-roboto mt-6">
