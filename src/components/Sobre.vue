@@ -67,6 +67,27 @@ const graduations = [
   }
 ]
 
+const calculateDuration = (startDate) => {
+  const start = new Date(startDate)
+  const now = new Date()
+  
+  let years = now.getFullYear() - start.getFullYear()
+  let months = now.getMonth() - start.getMonth()
+  
+  if (months < 0) {
+    years--
+    months += 12
+  }
+  
+  if (years > 0 && months > 0) {
+    return `${years} ${years === 1 ? 'ano' : 'anos'} e ${months} ${months === 1 ? 'mês' : 'meses'}`
+  } else if (years > 0) {
+    return `${years} ${years === 1 ? 'ano' : 'anos'}`
+  } else {
+    return `${months} ${months === 1 ? 'mês' : 'meses'}`
+  }
+}
+
 const experiences = [
   {
     title: 'Desenvolvedor Junior PHP Fullstack',
@@ -81,6 +102,8 @@ const experiences = [
     period: 'agost. 2022 - Atual',
     company: 'NITI - Polícia Científica',
     image: '',
+    current: true,
+    startDate: '2022-08-01',
     description: 'Desenvolvedor PHP Full-Stack Nível 2, com sólida experiência em Laravel, jQuery, Bootstrap e consumo de APIs e webservices externos. Minha principal função na empresa envolve a criação de novos sistemas que atendem tanto aos cidadãos do Estado de São Paulo, como o sistema de gerenciamento de perícias veiculares, quanto a sistemas internos voltados para os funcionários do gabinete da Superintendência, como o sistema de controle de armamentos e munições. Além disso, realizo manutenções nos sistemas existentes, que atualmente utilizam CakePHP, mas estou à frente do projeto de migração dessas plataformas para Laravel e tecnologias mais modernas.',
     techs: ['Laravel', 'SQL Server', 'CakePHP', 'Bootstrap', 'jQuery']
   }
@@ -209,11 +232,20 @@ const experiences = [
           <div 
             v-for="experience in experiences" 
             :key="experience.title"
-            class="group relative bg-[#18181b] border border-neutral-800 p-6 hover:border-green-500/50 transition-all duration-300"
+            class="group relative bg-[#18181b] border p-6 transition-all duration-300"
+            :class="experience.current ? 'border-green-500/70 shadow-lg shadow-green-500/20' : 'border-neutral-800 hover:border-green-500/50'"
           >
-            <div class="absolute top-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-400 to-green-600 group-hover:w-full transition-all duration-500"></div>
+            <div class="absolute top-0 left-0 h-0.5 bg-gradient-to-r from-green-400 to-green-600 transition-all duration-500" :class="experience.current ? 'w-full' : 'w-0 group-hover:w-full'"></div>
             
             <div class="absolute left-0 top-6 w-1 h-16 bg-gradient-to-b from-green-500 to-green-600"></div>
+            
+            <div v-if="experience.current" class="absolute top-4 right-4 flex flex-col items-end gap-1">
+              <div class="flex items-center gap-2 bg-green-500/20 border border-green-500 px-3 py-1 rounded-full animate-pulse">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span class="text-green-400 text-xs font-roboto font-bold uppercase">Atual</span>
+              </div>
+              <span class="text-green-400 text-xs font-roboto font-medium">{{ calculateDuration(experience.startDate) }}</span>
+            </div>
             
             <div class="flex items-start gap-4 mb-4">
               <div class="flex-shrink-0 bg-green-500/20 border-2 border-green-500 rounded-full p-3">
