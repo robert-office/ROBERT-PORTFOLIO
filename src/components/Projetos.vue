@@ -112,7 +112,7 @@ onUnmounted(() => {
             <div 
               v-for="(project, index) in projects" 
               :key="index"
-              class="w-full flex-shrink-0 px-2"
+              class="w-full flex-shrink-0"
             >
               <div class="group relative bg-[#18181b] border border-neutral-800 p-8 hover:border-purple-500/50 transition-all duration-300">
                 <div class="absolute top-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-500"></div>
@@ -167,14 +167,14 @@ onUnmounted(() => {
 
         <button 
           @click="prevSlide"
-          class="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-purple-500 hover:bg-purple-600 text-white p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-purple-500/50 z-10"
+          class="absolute cursor-pointer sm:-left-10 left-[10px] top-1/2 -translate-y-1/2 -translate-x-4 bg-purple-500 hover:bg-purple-600 text-white p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-purple-500/50 z-10"
         >
           <font-awesome-icon :icon="['fas', 'chevron-left']" class="text-xl" />
         </button>
 
         <button 
           @click="nextSlide"
-          class="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-purple-500 hover:bg-purple-600 text-white p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-purple-500/50 z-10"
+          class="absolute cursor-pointer sm:-right-10 right-[10px] top-1/2 -translate-y-1/2 translate-x-4 bg-purple-500 hover:bg-purple-600 text-white p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-purple-500/50 z-10"
         >
           <font-awesome-icon :icon="['fas', 'chevron-right']" class="text-xl" />
         </button>
