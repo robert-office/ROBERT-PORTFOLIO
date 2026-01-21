@@ -168,14 +168,14 @@ onUnmounted(() => {
 
         <button 
           @click="prevSlide"
-          class="absolute cursor-pointer sm:-left-10 left-[10px] top-1/2 -translate-y-1/2 -translate-x-4 bg-purple-500 hover:bg-purple-600 text-white p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-purple-500/50 z-10"
+          class="absolute cursor-pointer sm:-left-10 left-[10px] top-1/2 -translate-y-1/2 -translate-x-4 bg-purple-500 hover:bg-purple-600 text-white sm:p-3 p-1 sm:rounded-full rounded-md transition-all duration-300 shadow-lg hover:shadow-purple-500/50 z-10"
         >
           <font-awesome-icon :icon="['fas', 'chevron-left']" class="text-xl" />
         </button>
 
         <button 
           @click="nextSlide"
-          class="absolute cursor-pointer sm:-right-10 right-[10px] top-1/2 -translate-y-1/2 translate-x-4 bg-purple-500 hover:bg-purple-600 text-white p-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-purple-500/50 z-10"
+          class="absolute cursor-pointer sm:-right-10 right-[10px] top-1/2 -translate-y-1/2 translate-x-4 bg-purple-500 hover:bg-purple-600 text-white sm:p-3 p-1 sm:rounded-full rounded-md transition-all duration-300 shadow-lg hover:shadow-purple-500/50 z-10"
         >
           <font-awesome-icon :icon="['fas', 'chevron-right']" class="text-xl" />
         </button>
